@@ -23,5 +23,8 @@ for x in range(0, 512):
     result.append(row)
 
 print("Writing to results.txt...")
-with open("results.txt", "w+") as f:
-    f.write(str(result))
+
+for lists in result:
+    for i in lists:
+        with open("results.txt", "a") as f:
+            f.write(str(i) + "\n")
